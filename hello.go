@@ -1,9 +1,12 @@
 package main
 
 import (
+	"bufio"
 	"fmt"
+	"io"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 )
 
@@ -98,10 +101,12 @@ func iniciarMonitoramento() {
 	fmt.Println("Monitorando...")
 	// site := "https://www.alura.com.br"
 	// site := "https://random-status-code.herokuapp.com"
-	sites := []string{"https://random-status-code.herokuapp.com",
-		"https://www.alura.com.br",
-		"https://www.caelum.com.br",
-	}
+	// sites := []string{"https://random-status-code.herokuapp.com",
+	// 	"https://www.alura.com.br",
+	// 	"https://www.caelum.com.br",
+	// }
+
+	sites := leSitesDoArquivo()
 
 	for i := 0; i < monitoramentos; i++ {
 		for _, site := range sites {
@@ -114,12 +119,47 @@ func iniciarMonitoramento() {
 }
 
 func testaSite(site string) {
-	resp, _ := http.Get(site)
+	resp, err := http.Get(site)
+	if err != nil {
+		fmt.Println("Ocorreu erro: ", err)
+	}
 	if resp.StatusCode == 200 {
 		fmt.Println("Site:", site, "foi carregado com sucesso!")
 	} else {
 		fmt.Println("Site:", site, "está com problemas. Status code:", resp.StatusCode)
 	}
+}
+
+func leSitesDoArquivo() []string {
+	var sites []string
+
+	arquivo, err := os.Open("sites.txt")
+	// arquivo, err := ioutil.ReadFile("sites.txt")
+
+	if err != nil {
+		fmt.Println("Ocorreu um erro: ", err)
+	}
+
+	// Retornará vetor (isso parece java)
+	leitor := bufio.NewReader(arquivo)
+
+	for {
+		linha, err := leitor.ReadString('\n')
+		linha = strings.TrimSpace(linha)
+
+		sites = append(sites, linha)
+
+		if err == io.EOF {
+			break
+		}
+
+	}
+
+	arquivo.Close()
+
+	// sem converter para string, vem array de bytes
+	// fmt.Println(string(arquivo))
+	return sites
 }
 
 // func exibeNomes() {
