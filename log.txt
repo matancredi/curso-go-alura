@@ -1,0 +1,24 @@
+02/06/2020 02:30:24https://random-status-code.herokuapp.com - online:false
+02/06/2020 02:30:25https://www.alura.com.br - online:true
+02/06/2020 02:30:26https://www.caelum.com.br - online:true
+02/06/2020 02:30:26https://www.facebook.com - online:true
+02/06/2020 02:30:43 -https://random-status-code.herokuapp.com - online:false
+02/06/2020 02:30:44 -https://www.alura.com.br - online:true
+02/06/2020 02:30:45 -https://www.caelum.com.br - online:true
+02/06/2020 02:30:46 -https://www.facebook.com - online:true
+02/06/2020 02:30:57 - https://random-status-code.herokuapp.com - online:true
+02/06/2020 02:30:58 - https://www.alura.com.br - online:true
+02/06/2020 02:30:59 - https://www.caelum.com.br - online:true
+02/06/2020 02:31:00 - https://www.facebook.com - online:true
+02/06/2020 02:33:54 - https://random-status-code.herokuapp.com - online:false
+02/06/2020 02:33:55 - https://www.alura.com.br - online:true
+02/06/2020 02:33:56 - https://www.caelum.com.br - online:true
+02/06/2020 02:33:56 - https://www.facebook.com - online:true
+02/06/2020 02:34:02 - https://random-status-code.herokuapp.com - online:false
+02/06/2020 02:34:02 - https://www.alura.com.br - online:true
+02/06/2020 02:34:03 - https://www.caelum.com.br - online:true
+02/06/2020 02:34:03 - https://www.facebook.com - online:true
+02/06/2020 02:34:09 - https://random-status-code.herokuapp.com - online:true
+02/06/2020 02:34:09 - https://www.alura.com.br - online:true
+02/06/2020 02:34:10 - https://www.caelum.com.br - online:true
+02/06/2020 02:34:10 - https://www.facebook.com - online:true
