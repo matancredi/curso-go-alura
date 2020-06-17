@@ -29,13 +29,44 @@ func main() {
 	// // Endereço da conta da Magali
 	// fmt.Println(&contadaMagali)
 
-	contaDaSilvia := contas.ContaCorrente{Titular: "Silvia", Saldo: 300}
-	contaDoGustavo := contas.ContaCorrente{Titular: "Gustavo", Saldo: 100}
+	// contaDaSilvia := contas.ContaCorrente{Titular: "Silvia", Saldo: 300}
+	// contaDoGustavo := contas.ContaCorrente{Titular: "Gustavo", Saldo: 100}
 
-	status := contaDaSilvia.Tranferir(200, &contaDoGustavo)
+	// status := contaDaSilvia.Tranferir(200, &contaDoGustavo)
 
-	fmt.Println(status)
+	// fmt.Println(status)
 
-	fmt.Println(contaDaSilvia)
-	fmt.Println(contaDoGustavo)
+	// fmt.Println(contaDaSilvia)
+	// fmt.Println(contaDoGustavo)
+
+	// contaDoBruno := contas.ContaCorrente{
+	// 	Titular: clientes.Titular{
+	// 		Nome:      "Bruno",
+	// 		CPF:       "012.345.678-90",
+	// 		Profissao: "Analista de Sistemas",
+	// 	},
+	// 	NumeroAgencia: 123,
+	// 	NumeroConta:   456,
+	// 	Saldo:         100,
+	// }
+
+	// clienteBruno := clientes.Titular{
+	// 	Nome:      "Bruno",
+	// 	CPF:       "012.345.678-90",
+	// 	Profissao: "Analista de Sistemas",
+	// }
+
+	// contaDoBruno := contas.ContaCorrente{
+	// 	clienteBruno,
+	// 	123,
+	// 	456,
+	// 	100,
+	// }
+
+	// fmt.Println(contaDoBruno)
+
+	contaExemplo := contas.ContaCorrente{}
+	contaExemplo.Depositar(100)
+
+	fmt.Println(contaExemplo.ObterSaldo())
 }
